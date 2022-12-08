@@ -1,0 +1,100 @@
+body {
+  background-color: #b34d2e;
+  padding: 0 30px;
+
+  @media (max-width: 567px) {
+    padding: 0;
+  }
+}
+
+.popup {
+  max-width: 1232px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  border-radius: 32px 32px 0px 0px;
+
+  padding: 48px;
+
+  transform: translateY(120px);
+  height: calc(100vh - 120px);
+
+  @media (max-width: 767px) {
+    padding: 24px 16px 0 16px;
+    border-radius: 16px 16px 0px 0px;
+    transform: translateY(50px);
+    height: calc(100vh - 50px);
+  }
+
+  .header {
+    background-image: url(../image/header-wave.png), url(../image/header-moroz.png),
+      linear-gradient(90deg, #fc6b3f 0%, #fc833f 91.54%, #fc6b3f 100%);
+    background-repeat: no-repeat;
+    background-position: 5% center, 96% center, center center;
+
+    border-radius: 12px;
+    width: 100%;
+    height: 107px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 56px;
+
+    overflow: hidden;
+
+    margin-bottom: 32px;
+
+    @media (max-width: 767px) {
+      gap: 8px;
+      background-position: 65% center, 96% center, center center;
+      margin-bottom: 16px;
+    }
+
+    .text {
+      font-family: "Museo", sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 42px;
+      color: #ffffff;
+      padding-left: 60px;
+
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 16px;
+      }
+    }
+
+    .image {
+      width: auto;
+      height: 150%;
+      display: block;
+      @media (max-width: 540px) {
+        height: 100%;
+      }
+    }
+  }
+
+  .content {
+    font-size: 26px;
+    width: 100%;
+    height: calc(100% - 91px);
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+      background-color: #d9d9d9;
+      border-radius: 100px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #6fb5ec;
+      border-radius: 100px;
+    }
+
+    @media (max-width: 767px) {
+      height: calc(100% - 123px);
+    }
+  }
+}
